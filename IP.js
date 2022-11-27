@@ -292,7 +292,7 @@ const flags = new Map([
 const { body } = $response;
 const obj = JSON.parse(body);
 const title = flags.get(obj['countryCode']) + ' '+ obj['country'];
-const subtitle = obj['Province'] + ' ' + obj['city'] + ' ' + obj['isp'];
+const subtitle = obj['letterCheck(obj.city,obj.regionName,obj.country)'] + ' ' + obj['isp'];
 const ip = obj.query;
 const description = `${'\n' + '位置 ['}${placeAdder(obj.country)}${placeAdder(obj.regionName)}${placeAdder(obj.city)}${placeAdder(obj.district)}]\n\n` + `IP [${obj.query}]\n\n` + `ISP [${obj.isp}]\n\n` + `ORG [${obj.org}]\n\n` + `ASN [${obj.as.replace(/ .*$/gi, '')}]\n\n` + `ASN名称 [${obj.asname}]\n\n` + `时区 [${obj.timezone}]\n\n` + `邮编 [${obj.zip}]\n\n` + '定位 [' + ` 纬度 ${obj.lat},` + `经度 ${obj.lon} ]\n\n` + `特殊信息 [${geticon(obj.mobile, '移动')}${geticon(obj.hosting, '托管')}${geticon(obj.proxy, '代理')}]`;
 
