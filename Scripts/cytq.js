@@ -1,8 +1,6 @@
 /*
 脚本功能：彩云天气 会员
-下载地址：appstore
-软件版本：所有
-脚本作者：伟人
+
 作者QQ:55749353
 更新时间：2022-11-29
 问题反馈：QQ+55749353
@@ -13,7 +11,7 @@ TG频道群：暂无
 
 [rewrite_local]
 
-^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/Tartarus2014/Script/master/CaiYun.js
+^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/cytq.js
 
 [mitm]
 hostname = *.caiyunapp.*,*cyapi*
